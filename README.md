@@ -1,2 +1,3 @@
 # Mbiz_AdvancedReports
-Advanced reports in Magento
+
+Add advanced reporting in your Magento administration.

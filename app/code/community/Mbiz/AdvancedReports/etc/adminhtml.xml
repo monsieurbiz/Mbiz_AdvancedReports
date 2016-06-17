@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+/**
+ * This file is part of Mbiz_AdvancedReports for Magento.
+ *
+ * @license GPL-3.0+
+ * @author Jacques Bodin-Hullin <j.bodinhullin@monsieurbiz.com> <@jacquesbh>
+ * @category Mbiz
+ * @package Mbiz_AdvancedReports
+ * @copyright Copyright (c) 2015 Monsieur Biz (http://monsieurbiz.com)
+ */
+-->
+<config>
+    <menu>
+        <report>
+            <children>
+                <!-- Disable old report menus -->
+                <!--
+                <salesroot>
+                    <disabled>1</disabled>
+                </salesroot>
+                <shopcart>
+                    <disabled>1</disabled>
+                </shopcart>
+                <products>
+                    <disabled>1</disabled>
+                </products>
+                <customers>
+                    <disabled>1</disabled>
+                </customers>
+                <search>
+                    <disabled>1</disabled>
+                </search>
+                <statistics>
+                    <disabled>1</disabled>
+                </statistics>
+                <tags>
+                    <disabled>1</disabled>
+                </tags>
+                <review>
+                    <disabled>1</disabled>
+                </review>
+                -->
+
+                <!-- Custom boards -->
+                <!--
+                <advancedreports_board_example translate="title" module="Mbiz_AdvancedReports">
+                    <title>Board Example</title>
+                    <sort_order>10</sort_order>
+                    <action>adminhtml/advancedreports_board/view/board/example</action>
+                </advancedreports_board_example>
+                -->
+            </children>
+        </report>
+    </menu>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <report>
+                        <children>
+                            <!--
+                            <advancedreports_board_example translate="title" module="Mbiz_AdvancedReports">
+                                <title>Board Example</title>
+                            </advancedreports_board_example>
+                            -->
+                        </children>
+                    </report>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/**
+ * This file is part of Mbiz_AdvancedReports for Magento.
+ *
+ * @license GPL-3.0+
+ * @author Jacques Bodin-Hullin <j.bodinhullin@monsieurbiz.com> <@jacquesbh>
+ * @category Mbiz
+ * @package Mbiz_AdvancedReports
+ * @copyright Copyright (c) 2015 Monsieur Biz (http://monsieurbiz.com)
+ */
+-->
+<config>
+    <modules>
+        <Mbiz_AdvancedReports>
+            <version>0.1.0</version>
+        </Mbiz_AdvancedReports>
+    </modules>
+    <global>
+        <models>
+            <mbiz_advancedreports>
+                <class>Mbiz_AdvancedReports_Model</class>
+                <resourceModel>Mbiz_AdvancedReports_resource</resourceModel>
+            </mbiz_advancedreports>
+            <mbiz_advancedreports_resource>
+                <class>Mbiz_AdvancedReports_Model_Resource</class>
+            </mbiz_advancedreports_resource>
+        </models>
+        <blocks>
+            <mbiz_advancedreports>
+                <class>Mbiz_AdvancedReports_Block</class>
+            </mbiz_advancedreports>
+        </blocks>
+        <helpers>
+            <mbiz_advancedreports>
+                <class>Mbiz_AdvancedReports_Helper</class>
+            </mbiz_advancedreports>
+        </helpers>
+        <resources>
+            <mbiz_advancedreports_setup>
+                <setup>
+                    <module>Mbiz_AdvancedReports</module>
+                    <class>Mage_Core_Model_Resource_Setup</class>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </mbiz_advancedreports_setup>
+        </resources>
+    </global>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <Mbiz_AdvancedReports after="Mage_Adminhtml">Mbiz_AdvancedReports_Adminhtml</Mbiz_AdvancedReports>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+    <adminhtml>
+        <layout>
+            <updates>
+                <Mbiz_AdvancedReports module="Mbiz_AdvancedReports">
+                    <file>mbiz_advancedreports.xml</file>
+                </Mbiz_AdvancedReports>
+            </updates>
+        </layout>
+        <translate>
+            <modules>
+                <Mbiz_AdvancedReports>
+                    <files>
+                        <default>Mbiz_AdvancedReports.csv</default>
+                    </files>
+                </Mbiz_AdvancedReports>
+            </modules>
+        </translate>
+    </adminhtml>
+    <frontend/>
+    <!-- Dedicated config -->
+    <mbiz_advancedreports>
+        <boards>
+            <example>
+                <label>Example</label>
+                <requests>
+                    <example/>
+                </requests>
+            </example>
+        </boards>
+        <requests>
+            <example>
+                <model>mbiz_advancedreports/request_example</model>
+            </example>
+        </requests>
+    </mbiz_advancedreports>
+</config>

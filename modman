@@ -1,0 +1,7 @@
+app/code/community/Mbiz/AdvancedReports app/code/community/Mbiz/AdvancedReports
+app/design/adminhtml/base/default/layout/mbiz_advancedreports.xml app/design/adminhtml/base/default/layout/mbiz_advancedreports.xml
+app/design/adminhtml/base/default/template/mbiz_advancedreports app/design/adminhtml/base/default/template/mbiz_advancedreports
+app/etc/modules/Mbiz_AdvancedReports.xml app/etc/modules/Mbiz_AdvancedReports.xml
+app/locale/en_US/Mbiz_AdvancedReports.csv app/locale/en_US/Mbiz_AdvancedReports.csv
+app/locale/fr_FR/Mbiz_AdvancedReports.csv app/locale/fr_FR/Mbiz_AdvancedReports.csv
+js/mbiz_advancedreports js/mbiz_advancedreports
