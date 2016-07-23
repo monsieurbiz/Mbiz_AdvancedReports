@@ -1,7 +1,7 @@
 /**
  * This file is part of Mbiz_AdvancedReports for Magento.
  *
- * @license All rights reserved
+ * @license MIT
  * @author Jacques Bodin-Hullin <j.bodinhullin@monsieurbiz.com> <@jacquesbh>
  * @category Mbiz
  * @package Mbiz_AdvancedReports
