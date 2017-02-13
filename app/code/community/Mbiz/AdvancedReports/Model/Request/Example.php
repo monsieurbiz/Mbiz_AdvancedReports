@@ -165,7 +165,7 @@ class Mbiz_AdvancedReports_Model_Request_Example
         $errors += $this->_validatePeriod($data);
 
         // Keep the data after validation
-        $this->setData('_data', $this->_transformData($data->getData()));
+        $this->setData('_data', $this->_transformData($data));
 
         return $errors;
     }
