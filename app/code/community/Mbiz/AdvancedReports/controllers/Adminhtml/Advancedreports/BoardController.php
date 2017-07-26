@@ -158,6 +158,10 @@ class Mbiz_AdvancedReports_Adminhtml_Advancedreports_BoardController extends Mag
                 ->setHeader('Last-Modified', date('r'), true)
                 ->sendHeaders()
             ;
+
+            // Add BOM to automatically open the file in UTF-8 with Excel, LibreOffice etc…
+            echo "\xEF\xBB\xBF";
+
             $request->processExportAndDisplay();
             exit;
         }
