@@ -105,7 +105,10 @@ class Mbiz_AdvancedReports_Block_Adminhtml_Board_Request_Fields extends Mage_Adm
                 break;
         }
 
-        $fieldset->addField($fieldName, $field['type'], $field['field']);
+        $field = $fieldset->addField($fieldName, $field['type'], $field['field']);
+        if (isset($field['renderer'])) {
+            $field->setRenderer($field['renderer']);
+        }
     }
 
 }
