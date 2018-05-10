@@ -152,9 +152,9 @@ class Mbiz_AdvancedReports_Adminhtml_Advancedreports_BoardController extends Mag
                 ->setHttpResponseCode(200)
                 ->setHeader('Pragma', 'public', true)
                 ->setHeader('Cache-Control', 'must-revalidate, post-check=0, pre-check=0', true)
-                ->setHeader('Content-type', 'text/csv', true)
+                ->setHeader('Content-type', $request->getExportMimeType(), true)
                 //->setHeader('Content-Length', null, true)
-                ->setHeader('Content-Disposition', 'attachment; filename="report.csv"', true)
+                ->setHeader('Content-Disposition', 'attachment; filename="' . $request->getExportFilename() . '"', true)
                 ->setHeader('Last-Modified', date('r'), true)
                 ->sendHeaders()
             ;
