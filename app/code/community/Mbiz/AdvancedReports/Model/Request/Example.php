@@ -132,6 +132,7 @@ class Mbiz_AdvancedReports_Model_Request_Example
     public function processExportAndDisplay()
     {
         $headerPrinted = false;
+        echo $this->_getBom();
         foreach ($this->getCollection() as $item) {
             if (!$headerPrinted) {
                 $this->_printCsvLine(array_keys($item->getData()));

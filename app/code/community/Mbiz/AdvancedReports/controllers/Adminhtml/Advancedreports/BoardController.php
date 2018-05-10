@@ -159,9 +159,6 @@ class Mbiz_AdvancedReports_Adminhtml_Advancedreports_BoardController extends Mag
                 ->sendHeaders()
             ;
 
-            // Add BOM to automatically open the file in UTF-8 with Excel, LibreOffice etc…
-            echo "\xEF\xBB\xBF";
-
             $request->processExportAndDisplay();
             exit;
         }

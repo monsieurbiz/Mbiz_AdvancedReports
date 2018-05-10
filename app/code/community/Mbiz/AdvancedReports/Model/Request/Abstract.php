@@ -161,6 +161,16 @@ abstract class Mbiz_AdvancedReports_Model_Request_Abstract
     }
 
     /**
+     * Get BOM for Excel, LibreOffice and co
+     * <p>Used to open CSV files with ease.</p>
+     * @return string
+     */
+    protected function _getBom()
+    {
+        return "\xEF\xBB\xBF";
+    }
+
+    /**
      * Transform period
      * @param Varien_Object $request The request to transform
      * @return Varien_Object
