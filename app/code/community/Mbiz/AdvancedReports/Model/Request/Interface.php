@@ -30,6 +30,18 @@ interface Mbiz_AdvancedReports_Model_Request_Interface
     public function getLabel();
 
     /**
+     * Retrieve the filename of the export of the request
+     * @return string
+     */
+    public function getExportFilename();
+
+    /**
+     * Retrieve the mime type of the export of the request
+     * @return string
+     */
+    public function getExportMimeType();
+
+    /**
      * Retrieve the label of the request in a grid
      * @return string
      */

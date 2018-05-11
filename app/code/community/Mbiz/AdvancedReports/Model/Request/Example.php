@@ -132,13 +132,16 @@ class Mbiz_AdvancedReports_Model_Request_Example
     public function processExportAndDisplay()
     {
         $headerPrinted = false;
+        $fp = fopen('php://output', 'a');
+        fwrite($fp, $this->_getBom());
         foreach ($this->getCollection() as $item) {
             if (!$headerPrinted) {
-                $this->_printCsvLine(array_keys($item->getData()));
+                $this->_printCsvLine(array_keys($item->getData()), $fp, false);
                 $headerPrinted = true;
             }
-            $this->_printCsvLine($item->getData());
+            $this->_printCsvLine($item->getData(), $fp, false);
         }
+        fclose($fp);
     }
 
     /**

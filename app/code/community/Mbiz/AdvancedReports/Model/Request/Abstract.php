@@ -28,6 +28,18 @@ abstract class Mbiz_AdvancedReports_Model_Request_Abstract
     protected $_label = 'My Request';
 
     /**
+     * Export Filename
+     * @var string
+     */
+    protected $_exportFilename = 'report.csv';
+
+    /**
+     * Export MIME Type
+     * @var string
+     */
+    protected $_exportMimeType = 'text/csv';
+
+    /**
      * @inheritDoc
      */
     public function init(Varien_Object $data)
@@ -42,6 +54,22 @@ abstract class Mbiz_AdvancedReports_Model_Request_Abstract
     public function getLabel()
     {
         return Mage::helper('core')->__($this->_label);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getExportFilename()
+    {
+        return $this->_exportFilename;
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getExportMimeType()
+    {
+        return $this->_exportMimeType;
     }
 
     /**
@@ -161,6 +189,16 @@ abstract class Mbiz_AdvancedReports_Model_Request_Abstract
     }
 
     /**
+     * Get BOM for Excel, LibreOffice and co
+     * <p>Used to open CSV files with ease.</p>
+     * @return string
+     */
+    protected function _getBom()
+    {
+        return "\xEF\xBB\xBF";
+    }
+
+    /**
      * Transform period
      * @param Varien_Object $request The request to transform
      * @return Varien_Object
@@ -269,13 +307,21 @@ abstract class Mbiz_AdvancedReports_Model_Request_Abstract
 
     /**
      * Print a csv line
+     *
      * @param array $line The line to display
+     * @param resource|null $fp File resource
+     * @param bool $closeFp If false, the specified file resource won't be closed.
      */
-    protected function _printCsvLine(array $line)
+    protected function _printCsvLine(array $line, $fp = null, $closeFp = false)
     {
-        $fp = fopen('php://output', 'a');
+        if (null === $fp) {
+            $closeFp = true;
+            $fp = fopen('php://output', 'a');
+        }
         fputcsv($fp, $line, ';', '"');
-        fclose($fp);
+        if ($closeFp) {
+            fclose($fp);
+        }
     }
 
     /**
