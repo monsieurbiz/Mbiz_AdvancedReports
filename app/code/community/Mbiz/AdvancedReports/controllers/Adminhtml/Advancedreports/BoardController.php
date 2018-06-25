@@ -159,7 +159,12 @@ class Mbiz_AdvancedReports_Adminhtml_Advancedreports_BoardController extends Mag
                 ->sendHeaders()
             ;
 
-            $request->processExportAndDisplay();
+            try {
+                $request->processExportAndDisplay();
+            } catch (Exception $e) {
+                Mage::getSingleton('core/session')->addError($e->getMessage());
+                return $this->_redirectReferer();
+            }
             exit;
         }
 
