@@ -43,6 +43,7 @@
                 -->
 
                 <!-- Custom boards -->
+                <!-- !! From 1.9.4.x the value of the module argument should be "mbiz_advancedreports" -->
                 <!--
                 <advancedreports_board_example translate="title" module="Mbiz_AdvancedReports">
                     <title>Board Example</title>
@@ -59,6 +60,7 @@
                 <children>
                     <report>
                         <children>
+                            <!-- !! From 1.9.4.x the value of the module argument should be "mbiz_advancedreports" -->
                             <!--
                             <advancedreports_board_example translate="title" module="Mbiz_AdvancedReports">
                                 <title>Board Example</title>
