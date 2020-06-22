@@ -43,9 +43,9 @@
                 -->
 
                 <!-- Custom boards -->
-                <!-- !! From 1.9.4.x the value of the module argument should be "mbiz_advancedreports" -->
+                <!-- !! Before 1.9.4.x the value of the module argument should be "Mbiz_AdvancedReports" -->
                 <!--
-                <advancedreports_board_example translate="title" module="Mbiz_AdvancedReports">
+                <advancedreports_board_example translate="title" module="mbiz_advancedreports">
                     <title>Board Example</title>
                     <sort_order>10</sort_order>
                     <action>adminhtml/advancedreports_board/view/board/example</action>
@@ -60,9 +60,9 @@
                 <children>
                     <report>
                         <children>
-                            <!-- !! From 1.9.4.x the value of the module argument should be "mbiz_advancedreports" -->
+                            <!-- !! Before 1.9.4.x the value of the module argument should be "Mbiz_AdvancedReports" -->
                             <!--
-                            <advancedreports_board_example translate="title" module="Mbiz_AdvancedReports">
+                            <advancedreports_board_example translate="title" module="mbiz_advancedreports">
                                 <title>Board Example</title>
                             </advancedreports_board_example>
                             -->
