@@ -9,6 +9,11 @@
             "email": "j.bodinhullin@monsieurbiz.com"
         }
     ],
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    },
     "suggest": {
         "magento-hackathon/magento-composer-installer": "Allows to manage this package as a dependency."
     }
