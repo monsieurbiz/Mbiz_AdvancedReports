@@ -274,7 +274,7 @@ abstract class Mbiz_AdvancedReports_Model_Request_Abstract
 
         foreach ($dateFields as $dateField) {
             if ($request->getData($dateField)) {
-                $request->setData($dateField, $filterInput->filter($request->getData($dateField)));
+                $request->setData($dateField, $filterInput->filter(urldecode($request->getData($dateField))));
                 $request->setData($dateField, $filterInternal->filter($request->getData($dateField)));
             }
         }
