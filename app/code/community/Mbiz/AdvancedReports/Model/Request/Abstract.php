@@ -222,7 +222,7 @@ abstract class Mbiz_AdvancedReports_Model_Request_Abstract
         $request  = $this->_transformPeriod($request);
 
         $from     = Mage::app()->getLocale()->date($request->getDateFrom());
-        $to       = Mage::app()->getLocale()->date($request->getDataTo());
+        $to       = Mage::app()->getLocale()->date($request->getDateTo());
         $tomorrow = Mage::app()->getLocale()->date()->addDay(1);
 
         // Is From after tomorrow? It's bad :/
